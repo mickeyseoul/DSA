@@ -28,15 +28,15 @@ public class Main {
 		//append()
 
 		
-		//removeLast()
-		LinkedList myLinkedList = new LinkedList(0);
-		myLinkedList.append(1);
-		myLinkedList.append(2);
-		myLinkedList.append(3);
-		
-		myLinkedList.removeLast();
-		
-		myLinkedList.printList();
+//		//removeLast()
+//		LinkedList myLinkedList = new LinkedList(0);
+//		myLinkedList.append(1);
+//		myLinkedList.append(2);
+//		myLinkedList.append(3);
+//		
+//		myLinkedList.removeLast();
+//		
+//		myLinkedList.printList();
         
 		
 //		//prepend()
@@ -101,15 +101,15 @@ public class Main {
 //		myLinkedList.printList();
 		
 		
-//		//reverse()
-//		LinkedList myLinkedList = new LinkedList(0);
-//		myLinkedList.append(1);
-//		myLinkedList.append(2);
-//		myLinkedList.append(3);
-//		
-//		myLinkedList.reverse();
-//		
-//		myLinkedList.printList();
+		//reverse()
+		LinkedList myLinkedList = new LinkedList(0);
+		myLinkedList.append(1);
+		myLinkedList.append(2);
+		myLinkedList.append(3);
+		
+		myLinkedList.reverse();
+		
+		myLinkedList.printList();
 		
 	}
 
