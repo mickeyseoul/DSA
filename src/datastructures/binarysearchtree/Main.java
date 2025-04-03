@@ -84,7 +84,7 @@ public class Main {
 		System.out.println(myBST.DFSPreOrder()); // [47, 21, 18, 27, 76, 52, 82]
 		
 		
-		
+		System.out.println(myBST.DFSPostOrder()); //[18, 27, 21, 52, 82, 76, 47]
 		
 	}
 
