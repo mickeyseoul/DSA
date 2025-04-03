@@ -1,5 +1,9 @@
 package datastructures.binarysearchtree;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinarySearchTree {
 	
 	Node root; // initialized by null
@@ -119,6 +123,50 @@ public class BinarySearchTree {
 	
 	public void deleteNode(int value) {
 		deleteNode(root, value);
+	}
+	
+	
+	
+	// Tree Traversal
+	// BFS (Breadth First Search)
+	public ArrayList<Integer> BFS() {
+		Node currentNode = root;
+		Queue<Node> queue = new LinkedList<>();
+		ArrayList<Integer> results = new ArrayList<>();
+		
+		queue.add(currentNode);
+		
+		while (queue.size() > 0) {
+			currentNode = queue.remove();
+			results.add(currentNode.value);
+			if (currentNode.left != null) {
+				queue.add(currentNode.left);
+			}
+			if (currentNode.right != null) {
+				queue.add(currentNode.right);
+			}
+		}
+		return results;
+	}
+	
+	// DFS (Depth First Search)
+	public ArrayList<Integer> DFSPreOrder() {
+		ArrayList<Integer> results = new ArrayList<>();
+		
+		class Traverse { // Cannot declare method in the mothod
+			public Traverse(Node currentNode) {
+				results.add(currentNode.value);
+				if (currentNode.left != null) {
+					new Traverse(currentNode.left);
+				}
+				if (currentNode.right != null) {
+					new Traverse(currentNode.right);
+				}
+			}
+		}
+		
+		new Traverse(root); // Recursive
+		return results;
 	}
 	
 }
