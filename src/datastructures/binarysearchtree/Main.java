@@ -8,7 +8,6 @@ public class Main {
 		
 		System.out.println("root = " + myBST.root);
 		
-		
 		// insert()
 		myBST.insert(47);
 		myBST.insert(21);
@@ -18,7 +17,7 @@ public class Main {
 		myBST.insert(82);
 		
 		myBST.insert(27);
-//		
+		
 //		System.out.println(myBST.root.left.right.value);
 		
 		// contains()
@@ -75,17 +74,14 @@ public class Main {
 //		System.out.println("Root->Left: " + myBST.root.left.value);
 //		System.out.println("Root->Right: " + myBST.root.right.value);
 		
-		
-		
-		
 		// Tree Traversal
-		System.out.println(myBST.BFS()); //[47, 21, 76, 18, 27, 52, 82]
+		System.out.println(myBST.BFS()); // [47, 21, 76, 18, 27, 52, 82]
 		
 		System.out.println(myBST.DFSPreOrder()); // [47, 21, 18, 27, 76, 52, 82]
 		
+		System.out.println(myBST.DFSPostOrder()); // [18, 27, 21, 52, 82, 76, 47]
 		
-		System.out.println(myBST.DFSPostOrder()); //[18, 27, 21, 52, 82, 76, 47]
-		
+		System.out.println(myBST.DFSInOrder()); // [18, 21, 27, 47, 52, 76, 82]
 	}
 
 }
